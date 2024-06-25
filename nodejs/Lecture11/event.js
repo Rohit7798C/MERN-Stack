@@ -15,14 +15,26 @@ const event = new events.EventEmitter();     //Creating the object of the event 
 // event.emit('click');
 
 //With parameter n1
-event.on('click',(n1)=>console.log(n1));
-event.emit('click',"MERN Stack Course");
+// event.on('click',(n1)=>console.log(n1));
+// event.emit('click',"MERN Stack Course");
 // event.emit is used to manually trigger events from an EventEmitter object
 
+// We can also pass numbers as parameters and not only strings
+
+event.on('click',(n1,n2)=>console.log(n1+n2));
+event.emit('click',4,5)
+ 
 
 
+// Firing one event into another event in JS
 
+// $("button").on('click',function(){
+//     console.log("xyz");
+//     test();
+// })
 
-
+// function test(){
+//     alert("hello");
+// }
 
 
